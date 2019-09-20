@@ -7,13 +7,9 @@ CHECK_LEAK	?= 0
 MODULES		?=
 
 
-
-
 .PHONY: all test install
 
-all:
-	@$(INSTALL) -d resty_modules/lualib/resty
-	@test -f resty_modules/lualib/resty/string.lua || curl -s -o resty_modules/lualib/resty/string.lua https://raw.githubusercontent.com/openresty/lua-resty-string/master/lib/resty/string.lua
+all: ;
 
 install: all
 	$(INSTALL) -d $(DESTDIR)/$(LUA_LIB_DIR)/resty
